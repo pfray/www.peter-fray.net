@@ -1,0 +1,70 @@
+{{!< default}} 
+{{> header}}
+{{#post}}
+{{> page_title_post}}
+<div class="appiex-blog-content section-ptb">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-8">
+            <div class="single-blog-item {{post_class}}">
+               <div class="details-img">
+                  {{#if feature_image}}
+                    <img src="{{img_url feature_image}}" alt="blog">
+                  {{/if}}
+               </div>
+               <div class="blog-details">
+                  {{content}} 
+              </div>
+               <div class="blog-meta-wrapper">
+                  <div class="blog-meta">
+                     <div class="tag-clouds">
+                        {{tags separator=" "}}
+                     </div>
+                  </div>
+                  <div class="share-icon">
+                     <span>share on</span>
+                     <ul class="social-icon">
+                        <li>
+                           <a href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="sharebutton twitter"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                           <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="sharebutton facebook"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                           <a href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" class="sharebutton google"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="clearfix"></div>
+               <div class="blog-navigation">
+                  {{#prev_post}}
+                  <div class="previous-blog-post">
+                     <a href="{{url}}"><i class="fa fa-angle-left"></i>Previous Article </a>
+                  </div>
+                  {{/prev_post}}
+                  {{#next_post}}
+                  <div class="next-blog-post">
+                     <a href="{{url}}">Next Article <i class="fa fa-angle-right"></i></a>
+                  </div>
+                  {{/next_post}}
+               </div>
+               <div class="clearfix"></div>
+               {{> about-author}}  
+               {{/post}}						
+               <div class="clearfix"></div>
+            </div>
+         </div>
+         <!-- col-md-8 -->
+         <div class="col-md-4">
+            <div class="sidebar-contents">
+               {{> sidebar}}
+               <div class="twitter-feed">
+                  {{> twitter_feed}}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{{> footer}}

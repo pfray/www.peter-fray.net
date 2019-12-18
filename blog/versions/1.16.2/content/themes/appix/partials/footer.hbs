@@ -1,0 +1,89 @@
+      <!-- footer section -->
+      <div class="footer-area section-ptb-3">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-6 col-md-3">
+                  <div class="column">
+                     <div class="widget-title">
+                        <h3>About Us</h3>
+                     </div>
+                     <p></p>
+                     <div class="themeix-social-area">
+                        <a class="themeix-tool" href="#">
+                           <i class="fa fa-twitter"></i>
+                           <div id="colorbox" class="themeix-color twitter-color"></div>
+                        </a>
+                        <a class="themeix-tool" href="#">
+                           <i class="fa fa-facebook"></i>
+                           <div id="colorboxs" class="themeix-color facebook-color"></div>
+                        </a>
+                        <a class="themeix-tool" href="#">
+                           <i class="fa fa-google-plus"></i>
+                           <div id="colorboxss" class="themeix-color google-color"></div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                 <div class="column">
+                    <div class="widget-title">
+                        <h3>Most Popular Tags</h3>
+                    </div>
+                    <div class="tag-clouds">
+                      {{> tag_clouds}}
+                    </div>
+                 </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="column">
+                     <div class="widget-title">
+                        <h3>Get Support</h3>
+                     </div>
+                     <div class="widget-content">
+                        <ul>
+                           <li><a href="https://www.facebook.com/pfray">Facebook Page</a></li>
+                           <li><a href="http://twitter.com/Peter_L_Fray">Twitter Page</a></li>
+                           <li><a href="http://linkedin.com/in/thefray">linkedin Page</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-6 col-md-3">
+                  <div class="column">
+                   <div class="widget-content">
+                  {{!-- Email subscribe form at the bottom of the page --}}
+                   {{#if @labs.subscribers}}
+                     <section class="gh-subscribe">
+                        <div class="widget-title">
+                           <h3>Subscribe Now</h3>
+                           <p>Don’t miss our latest realeses and important updates</p>
+                        </div>
+                       {{subscribe_form placeholder="Email"}}
+                       </section>
+                      {{/if}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer-overlay blog-footer">
+         <div class="blog-footer-overlay">
+            <div class="container">
+               <div class="col-md-12">
+                  <div class="row">
+                     <div class="themeix-footer-bottom">
+                        <div class="inner-section">
+                           <ul class="footer-menu">
+                              <li><a href="/privacy-policy">Privacy Policy</a></li>
+                              <li><a href="/about">About Us</a></li>
+                              <li><a href="/disclaimer">Disclaimer</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+<!-- end contact us -->

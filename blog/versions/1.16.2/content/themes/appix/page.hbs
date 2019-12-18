@@ -1,0 +1,35 @@
+{{!< default}} 
+{{> header}}
+{{#post}}
+{{> page_title_post}}
+<div class="appiex-blog-content section-ptb">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-md-8">
+            <div class="single-blog-item {{post_class}}">
+               <div class="details-img">
+                  {{#if feature_image}}
+                  <img src="{{img_url feature_image}}" alt="blog">
+                  {{/if}}
+               </div>
+               <div class="blog-details">
+                      {{content}} 
+               </div>
+               <div class="clearfix"></div>
+               {{/post}}						
+               <div class="clearfix"></div> 
+            </div>
+         </div>
+         <!-- col-md-8 -->
+         <div class="col-md-4">
+            <div class="sidebar-contents">
+               {{> sidebar}}
+               <div class="twitter-feed">
+                  {{> twitter_feed}}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{{> footer}}

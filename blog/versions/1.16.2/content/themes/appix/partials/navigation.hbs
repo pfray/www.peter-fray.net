@@ -1,0 +1,29 @@
+<nav class="main-menu">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed custom-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><i class="fa fa-bars fa-lg"></i>
+            </button>
+            <div class="logo-brand">
+			<!-- start logo -->
+			{{#if @blog.logo}}
+			<a class="logo image-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+			{{else}}
+			<a class="logo text-logo" href="{{@blog.url}}"><img src="{{asset "images/logo.png"}}" alt="Appix Ghost Theme" class="logo-image">		</a>
+			{{/if}}
+			<!-- end logo -->
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+              {{#foreach navigation}}
+              <li class="{{#if current}}current{{/if}}"><a href="{{url}}">{{label}}</a></li>
+              {{/foreach}}
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+ 

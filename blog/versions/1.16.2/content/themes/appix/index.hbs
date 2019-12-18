@@ -1,0 +1,21 @@
+{{!< default}}
+{{> header}}
+{{> slider}}
+      <div class="appix-blog-content section-ptb">
+         <div class="container">
+            <div class="row">
+              {{> post_loop}}
+            </div>
+            <!-- pagination -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="cust-pagi">
+                    {{pagination}}
+                  </div>
+               </div>
+            </div>
+            <!-- end pagination -->
+         </div>
+      </div>
+
+{{> footer}}

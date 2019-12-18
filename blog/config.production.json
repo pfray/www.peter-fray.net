@@ -1,0 +1,29 @@
+{
+  "url": "http://www.peter-fray.net/blog",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "ghost-698",
+      "password": "95f239c74bc474d7d7d9",
+      "database": "ghost_production_blog"
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/html/blog/content"
+  }
+}

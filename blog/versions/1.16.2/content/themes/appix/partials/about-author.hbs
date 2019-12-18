@@ -1,0 +1,36 @@
+<!-- start about the author -->
+{{#author}}
+<div class="about-author">
+   <div class="author-box">
+      {{#if profile_image}}
+      <div class="author-img">
+         <img src="{{img_url profile_image}}" alt="{{name}}'s Picture" />
+      </div>
+      {{else}}
+      <div class="author-img">
+         <img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" />
+      </div>
+      {{/if}}
+      <div class="author-details">
+         <div class="author-name">
+            <h4 class="john">{{name}}</h4>
+            <ul class="author-link">
+               {{#if twitter}}
+               <li><a href="{{twitter_url}}"><i class="fa fa-twitter"></i></a></li>
+               {{/if}}                                           
+               {{#if facebook}}
+               <li><a href="{{facebook_url}}"><i class="fa fa-facebook"></i></a></li>
+               {{/if}}					
+               {{#if website}}
+               <li><a href="{{website}}"><i class="fa fa-link"></i></a></li>
+               {{/if}}
+            </ul>
+         </div>
+         {{#if bio}}
+         <p class="author-bio">{{bio}}</p>
+         {{/if}}
+      </div>
+   </div>
+</div>
+{{/author}}
+<!-- end about the author -->

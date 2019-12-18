@@ -1,0 +1,42 @@
+<div class="audio-post-format {{post_class}} ">
+  {{#if feature_image}}
+       <div class="blog-image">
+        <a href="{{url}}"><img src="{{img_url feature_image}}" alt="{{title}}"></a>
+    </div>
+  {{else}}
+    <div class="blog-image">
+  <div class="embed-media"></div>	 
+    </div>
+  {{/if}} 
+    <div class="blog-details">
+        <h3 class="blog-post-title"><a href="{{url}}">{{title}}</a></h3>
+        <ul class="blog-author-name">
+            <li><i class="fa fa-user" aria-hidden="true"></i>{{author}}</li>
+            {{#if tags}}
+            <li><i class="fa fa-folder-open"></i>{{tags limit="1"}}</li>
+            {{/if}}
+        </ul>
+        <div class="blog-excerpt">
+            {{content words=50}}
+        </div>
+        <div class="read-more">
+            <div class="themeix-button-group">
+                <a href="{{url}}" class="themeix-btn themeix-danger">read more</a>
+            </div>
+        </div>
+        <div class="share-icon">
+            <span>share on</span>
+            <ul class="social-icon">
+                <li>
+                    <a href="http://twitter.com/share?text={{encode title}}&amp;url={{url absolute=" true "}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="sharebutton twitter"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=" true "}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="sharebutton facebook"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://plus.google.com/share?url={{url absolute=" true "}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" class="sharebutton google"><i class="fa fa-google-plus"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

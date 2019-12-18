@@ -1,0 +1,28 @@
+{{#foreach posts}}
+<div class="col-sm-6">
+    <div class="blog-item {{post_class}}">
+	{{#has tag="image, audio, video"}}
+	{{#has tag="image"}}
+		{{> postformat_image}}
+	{{/has}}	
+	
+	{{#has tag="audio"}}
+		{{> postformat_audio}}
+	{{/has}}	
+
+	{{#has tag="video"}}
+		{{> postformat_video}}
+	{{/has}}
+	
+{{else}}
+	{{> postformat_standard}}
+{{/has}}
+
+    </div>
+</div>
+
+{{/foreach}}
+
+
+
+
